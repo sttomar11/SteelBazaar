@@ -1,0 +1,17 @@
+<div class="fit center">
+  <p-panel header="Sign in" class="inline-block mx-auto">
+    <span class="ui-float-label mx2 my2">
+      <input id="float-input-username" type="text" size="30" pInputText>
+      <label for="float-input-username">Username</label>
+    </span>
+    <span class="ui-float-label mx2 my2">
+      <input id="float-input" type="password" size="30" pPassword />
+      <label for="float-input">Password</label>
+    </span>
+
+    <div class="ui-toolbar-group-right" style="display: contents;">
+      <p-button class="m2" label="Login" (onClick)="login()"></p-button>
+      <p-button class="m2" label="Sign Up" (onClick)="signUp()"></p-button>
+    </div>
+  </p-panel>
+</div>

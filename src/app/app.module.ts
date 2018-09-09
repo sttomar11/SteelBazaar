@@ -8,10 +8,11 @@ import { LoginModule } from './modules/login/login-module';
 import { HomeModule } from './modules/home/home-module';
 import { CommonModule } from './modules/common/common-module';
 import { PageNotFoundModule } from './modules/page-not-found/page-not-found-module';
+import { UsersModule } from './modules/users/users-module';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +21,8 @@ import { PageNotFoundModule } from './modules/page-not-found/page-not-found-modu
     AppRoutingModule,
     LoginModule,
     HomeModule,
-    PageNotFoundModule
+    PageNotFoundModule,
+    UsersModule
   ],
   providers: [],
   bootstrap: [AppComponent]

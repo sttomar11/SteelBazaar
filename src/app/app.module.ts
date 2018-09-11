@@ -9,10 +9,12 @@ import { HomeModule } from './modules/home/home-module';
 import { CommonModule } from './modules/common/common-module';
 import { PageNotFoundModule } from './modules/page-not-found/page-not-found-module';
 import { UsersModule } from './modules/users/users-module';
+import { MynavbarComponent } from './mynavbar/mynavbar.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MynavbarComponent
   ],
   imports: [
     BrowserModule,

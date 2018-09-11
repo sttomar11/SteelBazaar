@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from '../common/services/login-service';
 import { Router } from '@angular/router';
+import { LoginDetails } from '../common/models/login-details.model';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +10,11 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private loginService: LoginService, private router: Router) { }
+  public dm: LoginDetails;
+
+  constructor(private loginService: LoginService, private router: Router) {
+    this.dm = new LoginDetails();
+  }
 
   ngOnInit() {
   }

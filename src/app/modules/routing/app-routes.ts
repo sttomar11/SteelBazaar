@@ -5,6 +5,7 @@ import { AuthGuard } from '../common/guards/auth-guard';
 import { PageNotFoundComponent } from '../page-not-found/page-not-found.component';
 import { ForgotPasswordComponent } from '../login/forgot-password/forgot-password.component';
 import { NewUserComponent } from '../users/new-user/new-user.component';
+import { MynavbarComponent } from '../../mynavbar/mynavbar.component';
 
 
 export const routes: Routes = [

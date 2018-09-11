@@ -1,21 +1,48 @@
-<div class="fit center">
-  <p-panel header="Sign in" class="inline-block mx-auto left-align">
-    <span class="ui-float-label m3">
-      <input id="float-input-username" type="text" style="width:100%" required minlength="4" pInputText>
-      <label for="float-input-username">Username</label>
-    </span>
-    <span class="ui-float-label m3">
-      <input id="float-input" type="password" style="width:100%" pPassword required minlength="4"/>
-      <label for="float-input">Password</label>
-    </span>
+<div class="sign_form mt4 ">
+  <div class="ui-g">
+    <div class="ui-md-4"></div>
+    <div class="ui-md-4">
+      <div class="myhead center">
+        <h1>Sign In</h1>
+      </div>
+      <div class="form_box  fit bg-fa p2 shadow">
+        <div class="ui-g">
+          <form #loginForm="ngForm">
+            <div class="ui-md-3 ui-g-4">
+              <p class="mt1">Email Id :</p>
+            </div>
+            <div class="ui-md-9 ui-g-8">
+              <span class="ui-float-label">
+                <input id="float-input" type="text" name="email" class=" wd-100" pInputText placeholder="Email"
+                  [(ngModel)]="dm.email" required #email="ngModel">
+                <div [hidden]="email.valid || email.pristine" class="alert alert-danger">
+                  Email is required
+                </div>
+              </span>
+            </div>
 
-    <div class="inline-block float-right">
-      <a [routerLink]="['/register']" routerLinkActive="active" class="mx1">Register</a>
-      <a [routerLink]="['/forgot-password']" routerLinkActive="active" class="mx1">Forgot Password</a>
-    </div>
+            <div class="ui-md-3 ui-g-4">
+              <p class="mt1">Password :</p>
+            </div>
+            <div class="ui-md-9 ui-g-8">
+              <input pPassword type="password" name="pword" class="wd-100" placeholder="Password" [(ngModel)]="dm.password"
+                required #pword="ngModel" />
+              <div [hidden]="pword.valid || pword.pristine" class="alert alert-danger">
+                  Password is required
+              </div>
+              <div class="right-align">
+                <small><a [routerLink]="['/register']" routerLinkActive="active" class="mx1">Register</a> | <a
+                    [routerLink]="['/forgot-password']" routerLinkActive="active" class="mx1">Forgot Password</a></small>
+              </div>
+            </div>
+          </form>
+        </div>
 
-    <div class="ui-toolbar-group-right" style="display: contents;">
-      <p-button class="m2" label="Login" (onClick)="login()"></p-button>
+        <div class="center">
+          <p-button class="m2" label="Log In" (onClick)="login()" [disabled]="!loginForm.form.valid"></p-button>
+        </div>
+      </div>
     </div>
-  </p-panel>
+    <div class="ui-md-4"></div>
+  </div>
 </div>
